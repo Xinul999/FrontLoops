@@ -1,0 +1,95 @@
+:root{
+    --bg-color: #8e44ad;
+    --container-size: 700px;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: var(--container-size);
+    margin: 10vh auto;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.root{
+    display: flex;
+    align-items: baseline;
+    padding: 1em;
+}
+.flex-container{
+    display: flex;
+}
+ol{
+    list-style: none;
+    counter-reset: start;
+}
+ol > * + *{
+    margin-block-start: 1em;
+}
+li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #808080;
+}
+
+li::before{
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    color: #808080;
+    content: counter(start);
+    counter-increment: start;
+    display: flex;
+    font-weight: bold;
+    height: 1.8em;
+    justify-content: center;
+    margin-right: 1em;
+    width: 1.8em;
+}
+li.checked::before{
+    background-color: #2a80b9;
+    color: white;
+}
+li:hover{
+    color: rgba(0, 0, 0, 0.80);
+}
+li.checked{
+    color: black;
+}
+
+.container-right{
+    margin-inline-start: 3.5em;
+    margin-inline-end: 3.5em;
+}
+.container-right > * + * {
+    margin-block-start: 1.5em;
+}
+button{
+    padding: 1em 0.8em;
+    border: none;
+    font-family: Roboto, sans-serif;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #e6e6e6;
+}
+button + button {
+    margin-left: 0.5em;
+}
+
