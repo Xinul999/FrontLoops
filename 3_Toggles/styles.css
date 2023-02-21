@@ -1,0 +1,97 @@
+:root{
+    --bg-color: #40729e;
+    --button-bg-right: #2ccc71;
+    --button-bg-left: #f1f1f1;
+
+    --width: 80px;
+    --height: 40px;
+}
+body{
+    background-color: var(--bg-color);
+}
+
+
+.container{
+    margin: 5vw auto;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center > * {
+    margin-block-start: 2rem;
+}
+.center > *:last-child{
+    margin-block-end: 2rem;
+}
+.switcher{
+    width: var(--width);
+    height: var(--height);
+}
+
+span{
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--height);
+    background-color: var(--button-bg-left);
+    transition: transform 3s ease-in-out;
+}
+
+span::before{
+    position: absolute;
+    --radius: 39px;
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0,
+    rgba(0, 0, 0, 0.4) 0 0 4px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.slide{
+    background-color: var(--button-bg-right);
+}
+
+.slide::before {
+    animation-name: sliders;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    transition: all 200ms ease-in;
+}
+
+@keyframes sliders {
+    0% {
+        left: 0;
+        width: 40px;
+    }
+    40% {
+        left: 20px;
+        width: 60px;
+    }
+    80%{
+        left: 40px;
+        width: 60px;
+    }
+    100% {
+        left: calc(var(--width) - var(--radius));
+    }
+}
+
+
+
+
+
+
+
+
