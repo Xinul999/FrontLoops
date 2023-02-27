@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2A2C60;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.root{
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border-radius: 6px;
+}
