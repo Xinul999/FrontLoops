@@ -1,0 +1,15 @@
+
+body{
+	min-width: 900px;
+	height: 100vh;
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.container-watch{
+	width: 600px;
+	height: 300px;
+	box-shadow: 0 0 6px teal;
+	background-color: white;
+	margin: 50px auto;
+	border-radius: 1em;
+}
