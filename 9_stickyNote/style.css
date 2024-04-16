@@ -1,0 +1,33 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+	min-width: 65rem;
+	background-color: rgba(230, 230, 230, 0.15);
+	justify-content: center;
+	gap: 2em;
+}
+
+
+.container-sticky{
+	position: sticky;
+	top: 12px;
+	margin-top: 100px;
+	width: 200px;
+	height: 150px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.05);
+	border: 2px solid rgba(200, 200, 200, 0.3);
+	background-color: white;
+	border-radius: 4px;
+}
+
+.container-scroll{
+	margin: 20px 0;
+	background-color: rgba(221, 221, 221, 0.7);
+	min-height: 80rem;
+	width: 555px;
+}
