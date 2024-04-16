@@ -1,0 +1,77 @@
+*{
+	box-sizing: border-box;
+}
+button{
+	padding: 0.675em;
+	border: 0;
+	border-radius: 0.25em;
+	background-color: rgb(240, 240, 240);
+	cursor: pointer;
+}
+button:hover{
+	background-color: rgb(230, 230, 230);
+}
+button:active{
+	scale: 0.95;
+}
+body{
+	--side-bar--length: 400px;
+	background-color: #46457A;
+}
+
+.container-panel{
+	margin: 100px auto;
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	border-radius: 0.35em;
+}
+.root{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+button + button {
+	margin-left: 4px;
+}
+
+.side-bar-left{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	min-height: 100vh;
+	transition: width 0.85s linear;
+	overflow: hidden;
+}
+
+.side-bar-left.open{
+	width: var(--side-bar--length);
+}
+.side-bar-left.close{
+	width: 0;
+}
+.container-side-bar{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
+.visible{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 1.8s linear, visibility 0s 0.65s;
+}
+.hidden{
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+.font-title{
+	font-weight: 600;
+	font-size: 1.4em;
+}
